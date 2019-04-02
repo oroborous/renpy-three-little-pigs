@@ -33,7 +33,7 @@ label start:
 
     menu:
 
-        "Nah, I'll stick with straw.":
+        "But straw houses are so beautiful.":
 
             show pig1 neutral
 
@@ -41,17 +41,19 @@ label start:
 
             jump wolf
 
-        "Better safe than sorry. Brick it is!":
+        "Hah! Wolves don't scare me!":
 
             show pig1 mad
 
-            pig1 "Oof! I hope this is worth all the extra work."
+            pig1 "I'm not scared of the big bad wolf! Straw will be just fine."
 
             jump wolf
 
 label wolf:
 
     play music "chase.mp3" fadeout 1.0
+
+    play sound "wolf howl.mp3"
 
     show pig1 scared at left with move
 
@@ -75,6 +77,10 @@ label wolf:
     show pig1 scared
 
     wolf "...and I'll blow your house in."
+
+    #play sound "blow.mp3"
+
+    #play sound "straw house crash.mp3"
 
     jump theend
 
