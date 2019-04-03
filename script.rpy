@@ -1,15 +1,8 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
 define n = Character("Narrator")
-define pig1 = Character("First Little Piggy")
-define pig2 = Character("Second Little Piggy")
-define pig3 = Character("Third Little Piggy")
-define wolf = Character("Big Bad Wolf")
-
-# The game starts here.
+define pig1 = Character("First Little Piggy", color="#FFD5EA")
+define pig2 = Character("Second Little Piggy", color="#928168")
+define pig3 = Character("Third Little Piggy", color="#D5B683")
+define w = Character("Big Bad Wolf", color="#728194")
 
 label start:
 
@@ -55,13 +48,13 @@ label wolf:
 
     play sound "wolf howl.mp3"
 
-    show pig1 scared at left with move
+    show pig1 scared at right with move
 
     pig1 "Oh no! Here comes the wolf!"
 
-    show wolf neutral at right with moveinright
+    show wolf neutral at left with moveinleft
 
-    wolf "Little pig, little pig, let me in."
+    w "Little pig, little pig, let me in."
 
     show pig1 mad
 
@@ -69,25 +62,46 @@ label wolf:
 
     show wolf think
 
-    wolf "Then I'll huff..."
-    wolf "...and I'll puff..."
+    w "Then I'll huff..."
+    w "...and I'll puff..."
 
     show wolf mad
 
     show pig1 scared
 
-    wolf "...and I'll blow your house in."
+    stop music fadeout 1.0
 
-    #play sound "blow.mp3"
+    w "...and I'll blow your house in."
 
-    #play sound "straw house crash.mp3"
+    show wolf puff
+
+    play sound "blow.mp3"
+
+    w "Phhhhhhwwwwwwww.......!"
+
+    queue sound "straw house crash.mp3"
 
     jump theend
 
 label theend:
+    hide wolf with moveoutleft
+
+    show pig1 sad at center with move
+
+    pig1 "Oh dear..."
+
+    play music "fairytale.mp3"
+
+    show pig2 sad at right with moveinright
+
+    pig2 "This is terrible!"
+
+    show pig3 sad at left with moveinleft
+
+    pig3 "Whatever shall we do?"
 
     stop music fadeout 2.0
 
-    n "The End"
+    n "To be continued..."
 
     return
