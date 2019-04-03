@@ -1524,6 +1524,6 @@ screen credits():
             text "Programming: Stacy Read"
             text "Music: Brittney Schultz"
             text "Art (3 Little Pigs): Gigi Read"
-            text "Art (Goldilocks): Chloe"
+            text "Art (Goldilocks): Chloe McChesney"
             text "Art (3 Billy Goats Gruff): Callie Swensen"
             textbutton _("Return") action Return()
