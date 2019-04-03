@@ -44,7 +44,7 @@ label start:
 
 label wolf:
 
-    play music "chase.mp3" fadeout 1.0
+    play music "drama.mp3" fadeout 1.0
 
     play sound "wolf howl.mp3"
 
