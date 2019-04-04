@@ -1523,7 +1523,5 @@ screen credits():
         vbox: #This puts the elements in a vertical box, you could use an hbox or a grid or a fixed, etc.
             text "Programming: Stacy Read"
             text "Music: Brittney Schultz"
-            text "Art (3 Little Pigs): Gigi Read"
-            text "Art (Goldilocks): Chloe McChesney"
-            text "Art (3 Billy Goats Gruff): Callie Swensen"
+            text "Art: Gigi Read"
             textbutton _("Return") action Return()
